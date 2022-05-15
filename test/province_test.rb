@@ -40,4 +40,14 @@ class ProvinceTest < Minitest::Test
     assert_equal(-26, @asia.shortfall)
     assert_equal(-10, @asia.profit)
   end
+
+  def test_empty_string_demand
+    @asia.demand = ""
+    assert_raises NoMethodError do
+      @asia.shortfall
+    end
+    assert_raises ArgumentError do
+      @asia.profit
+    end
+  end
 end
