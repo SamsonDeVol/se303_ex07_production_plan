@@ -21,4 +21,7 @@ class ProvinceTest < Minitest::Test
     assert_equal(270, @asia.demand_cost)
   end
 
+  def test_demand_value
+    assert_equal(500, @asia.demand_value)
+  end
 end
